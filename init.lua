@@ -25,7 +25,7 @@ _p.setting_types = {
 
 ---Get the value of a given key in a given type
 ---@param key string The setting key
----@param type SettingsLoaderTypes The type of the setting
+---@param stype SettingsLoaderTypes The type of the setting
 ---@param default any The default value
 function _p.get_setting_value(key, stype, default)
     if stype == "booolean" then
