@@ -1,0 +1,5 @@
+# textdomain: settings_loader
+
+##[ init.lua ]##
+Reload supported settings=
+All settings reloaded.=
