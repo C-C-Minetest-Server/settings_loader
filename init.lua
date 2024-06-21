@@ -15,7 +15,7 @@ local _p = {}
 ---@type { [string]: fun(value: string, default: any): any }
 ---@enum (key) SettingsLoaderTypes
 _p.setting_types = {
-    string = function(value, default) return value == "" and default or value end,
+    string = function(value, default) return value ~= "" and value or default end,
     float = function(value, default) return tonumber(value) or default or 0 end,
     integer = function(value, default) return math.floor(tonumber(value) or default or 0) end,
     boolean = function() end, -- Handled in get_setting_value
