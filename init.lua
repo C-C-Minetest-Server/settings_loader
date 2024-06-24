@@ -18,6 +18,7 @@ _p.setting_types = {
     string = function(value, default) return value ~= "" and value or default end,
     float = function(value, default) return tonumber(value) or default or 0 end,
     integer = function(value, default) return math.floor(tonumber(value) or default or 0) end,
+    v3f = function(value, default) return minetest.string_to_pos(value) or default end,
     boolean = function() end, -- Handled in get_setting_value
     np_group = function() end, -- Handled in get_setting_value
     flags = function() end, -- Handled in get_setting_value
