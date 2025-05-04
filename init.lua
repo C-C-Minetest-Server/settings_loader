@@ -29,7 +29,7 @@ _p.setting_types = {
 ---@param stype SettingsLoaderTypes The type of the setting
 ---@param default any The default value
 function _p.get_setting_value(key, stype, default)
-    if stype == "booolean" then
+    if stype == "boolean" then
         return settings:get_bool(key, default)
     elseif stype == "np_group" then
         return settings:get_np_group(key)
